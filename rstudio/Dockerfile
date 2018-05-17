@@ -76,6 +76,8 @@ RUN apt-get update \
           \nsaveAction="0"' \ 
           > /home/rstudio/.rstudio/monitored/user-settings/user-settings \ 
   && chown -R rstudio:rstudio /home/rstudio/.rstudio
+  && install.packages('RODBC')
+
 
 COPY userconf.sh /etc/cont-init.d/userconf
 
